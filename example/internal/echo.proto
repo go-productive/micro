@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package internal;
+
+option go_package = "github.com/go-productive/micro/example/internal";
+
+message EchoMsg {
+    string msg = 1;
+}
+
+service Echo {
+    rpc Echo(EchoMsg) returns (EchoMsg);
+}
